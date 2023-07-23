@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shose_store/components/main_screen_text.dart';
 import 'package:shose_store/components/view_banner.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ViewBanner(),
+      home: const MainScreen(),
     );
   }
 }
