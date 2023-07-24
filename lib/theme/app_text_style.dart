@@ -12,4 +12,9 @@ class AppTextStyle {
       TextStyle(fontSize: 14, fontWeight: FontWeight.w800);
   static const TextStyle bannerText0 =
       TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+  static const TextStyle newIn = TextStyle(fontSize: 12, color: Colors.white);
+  static const TextStyle mainText =
+      TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
+  static const TextStyle mainUsd =
+      TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white);
 }

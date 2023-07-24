@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shose_store/components/main_screen_text.dart';
-import 'package:shose_store/components/view_banner.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
