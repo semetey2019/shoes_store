@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shose_store/components/ekinchibet.dart';
 import 'package:shose_store/theme/app_colors.dart';
 import 'package:shose_store/theme/app_text_style.dart';
 import 'package:shose_store/theme/app_texts.dart';
@@ -14,21 +15,30 @@ class MainScreen extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 15, top: 45),
+            padding: const EdgeInsets.only(left: 15, top: 45, right: 8),
             child: Stack(
               children: [
-                ClipRRect(
-                  child: Center(
-                    child: Image.asset(
-                      "assets/images/img.png",
-                      height: 380,
-                      width: 550,
-                    ),
-                  ),
-                  borderRadius: BorderRadius.circular(16),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                    // InkWell(
+                    //   onTap: () {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (context) => Ekinchibet()),
+                    //     );
+                    //   },
+                    // ),
+                    for (int i = 5; i < 7; i++)
+                      Image.asset(
+                        "assets/images/$i.png",
+                        height: 412,
+                        fit: BoxFit.cover,
+                      ),
+                  ]),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 45, top: 210),
+                  padding: const EdgeInsets.only(left: 21, top: 220),
                   child: Row(
                     children: [
                       Column(
@@ -128,22 +138,31 @@ class MainScreen extends StatelessWidget {
                     for (int i = 1; i < 4; i++)
                       Column(
                         children: [
-                          Container(
-                            height: 150,
-                            width: 150,
-                            padding: const EdgeInsets.all(5),
-                            margin: const EdgeInsets.only(
-                              left: 20,
-                              top: 8,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [BoxShadow(color: Colors.grey)],
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Image.asset(
-                              'assets/images/$i.png',
-                              fit: BoxFit.contain,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Ekinchibet()),
+                              );
+                            },
+                            child: Container(
+                              height: 150,
+                              width: 150,
+                              padding: const EdgeInsets.all(5),
+                              margin: const EdgeInsets.only(
+                                left: 20,
+                                top: 8,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [BoxShadow(color: Colors.grey)],
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Image.asset(
+                                'assets/images/$i.png',
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                           const Padding(
@@ -156,9 +175,8 @@ class MainScreen extends StatelessWidget {
                                   AppTexts.nike,
                                   style: AppTextStyle.bannerText,
                                 ),
-                                Text(
-                                  AppTexts.nike1,
-                                ),
+                                Text(AppTexts.nike1,
+                                    style: AppTextStyle.bannerText1),
                                 Text(
                                   AppTexts.nike2,
                                   style: AppTextStyle.bannerText2,
@@ -171,6 +189,7 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              Image.asset("assets/images/5.png"),
             ],
           ),
         ],

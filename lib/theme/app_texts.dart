@@ -1,7 +1,7 @@
 class AppTexts {
   static const nike = ("Nike ISPA Overreact Sail \nMulti ");
   static const nike1 = ("Lowest Ask ");
-  static const nike2 = ("\$25 ");
+  static const nike2 = ("\$233 ");
 
   static const adidass =
       ("adidas Yeezy Boost 700 \n MNVN Bone Lowest Ask \$50");
