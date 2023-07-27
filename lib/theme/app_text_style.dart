@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shose_store/theme/app_colors.dart';
 
 class AppTextStyle {
   static const TextStyle bannerText =
@@ -16,4 +17,19 @@ class AppTextStyle {
       TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
   static const TextStyle mainUsd =
       TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white);
+  static const titleStyle = TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'PopularBrands.ttf',
+      color: AppColors.titleColor);
+  static const brandStyle = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: AppColors.brandColor,
+  );
+  static const priceStyle = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.greyColor,
+  );
 }
